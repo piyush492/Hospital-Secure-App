@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Module Header: Hospital Management Appointment System UI -->
+    <!-- Purpose: Provides a responsive card UI for booking doctor appointments. -->
+    <!-- Key Components: Inline CSS styling, appointment form, and external script integration. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management Appointment System</title>
+    <!-- ==================== Config: Styling ==================== -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 360px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            font-weight: 600;
+            color: #555;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #msg {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ==================== State: UI Structure ==================== -->
+    <div class="card">
+        <h2>Book Appointment</h2>
+        <form id="appointmentForm">
+            <label for="pName">Patient Name</label>
+            <input type="text" id="pName" placeholder="Enter Full Name" required>
+
+            <label for="dName">Select Doctor</label>
+            <select id="dName" required>
+                <option value="">-- Choose Doctor --</option>
+                <option value="Dr. Sharma (Cardiologist)">Dr. Sharma (Cardiologist)</option>
+                <option value="Dr. Verma (Neurologist)">Dr. Verma (Neurologist)</option>
+                <option value="Dr. Patel (Pediatrician)">Dr. Patel (Pediatrician)</option>
+                <option value="Dr. Verma (Neurologist)">Dr. Mahajan (Dermotologists)</option>
+            </select>
+
+            <label for="apptDate">Appointment Date</label>
+            <input type="date" id="apptDate" required>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+        <div id="msg"></div>
+    </div>
+
+    <!-- ==================== Handlers: External Script ==================== -->
+    <script src="app.js"></script>
+</body>
+
+</html>
